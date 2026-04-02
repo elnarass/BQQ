@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Админ панель</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <!-- Кнопка меню -->
+    
+   <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+   <!-- Боковая панель -->
+   <div id="sidebar" class="sidebar">
+       <div class="user-info" onclick="toggleUserMenu()">
+           👤 <span id="userName"></span>
+       </div>
+       
+       <div id="userMenu" class="user-menu">
+           <a href="#" onclick="logout()">Шығу</a>
+       </div>
+       <a href="index.html">Басты бет</a>
+       <a href="cart.html">Жәшік</a>
+       <a href="profile.html">Тапсырыстар</a>
+       <a href="admin.html" id="adminLink">Админ панель</a>
+   </div>
+   <!-- Затемнение -->
+   <div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+   
+<h1>Админ панель</h1>
+<h2>Управление товарами</h2>
+
+<input type="text" id="name" placeholder="Название">
+<input type="text" id="price" placeholder="Цена">
+<input type="text" id="image" placeholder="URL картинки">
+<input type="text" id="description" placeholder="Описание">
+
+<button onclick="addProduct()">Добавить товар</button>
+
+<div id="products"></div>
+<div id="orders"></div>
+
+<script src="auth-check.js"></script>
+<script src="ui.js"></script>
+<script>
+    checkAdmin();
+</script>
+
+<script src="admin.js"></script>
+<script src="admin-products.js"></script>  
+</body>
+</html>

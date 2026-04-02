@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>BALQAIMAQ</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Balqaimaq</div>
+    
+        <div class="auth-buttons">
+            <a href="login.html" class="btn login">Кіру</a>
+            <a href="register.html" class="btn register">Тіркелу</a>
+        </div>
+    </header>
+    <!-- Кнопка меню -->
+    
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<!-- Боковая панель -->
+<div id="sidebar" class="sidebar">
+    <div class="user-info" onclick="toggleUserMenu()">
+        👤 <span id="userName"></span>
+    </div>
+    
+    <div id="userMenu" class="user-menu">
+        <a href="#" onclick="logout()">Шығу</a>
+    </div>
+    <a href="index.html">Басты бет</a>
+    <a href="cart.html">Жәшік</a>
+    <a href="profile.html">Тапсырыстар</a>
+    <a href="admin.html" id="adminLink">Админ панель</a>
+</div>
+<!-- Затемнение -->
+<div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+    
+    
+
+<div id="products" class="products"></div>
+<h2>Мы на карте</h2>
+
+<iframe
+    src="https://www.google.com/maps?q=Astana+Kazakhstan+Balqaimaq&output=embed"
+    width="100%"
+    height="400"
+    style="border:0; border-radius:12px;"
+    allowfullscreen=""
+    loading="lazy">
+</iframe>
+
+    </div>
+
+    <div class="map-info">
+        <h2>BALQAIMAQ </h2>
+        <p>Астанада кондитерлік қызмет көрсету. Балғын торттар мен десерттерді жеткізу</p>
+        <p> Астана, Мәңгілік ел 37, 87</p>
+    </div>
+
+</section>
+<script src="products.js"></script>
+<script src="ui.js"></script>
+<script src="auth-check.js"></script>
+</body>
+</html>

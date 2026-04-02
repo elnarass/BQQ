@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Жеке бет</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<div id="sidebar" class="sidebar">
+    <div class="user-info" onclick="toggleUserMenu()">
+        👤 <span id="userName"></span>
+    </div>
+    
+    <div id="userMenu" class="user-menu">
+        <a href="#" onclick="logout()">Выйти</a>
+    </div>
+    <a href="index.html">Главная</a>
+    <a href="cart.html">Жәшік</a>
+    <a href="profile.html">Тапсырыстар</a>
+</div>
+
+<div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+<h1>Тапсырыстар</h1>
+
+<div id="orders"></div>
+
+<script src="ui.js"></script>
+<script src="profile.js"></script>
+<script src="auth-check.js"></script>
+</body>
+</html>

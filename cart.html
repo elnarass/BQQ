@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Жәшік</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+<!-- Кнопка меню -->
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<!-- Боковая панель -->
+<div id="sidebar" class="sidebar">
+    <div class="user-info" onclick="toggleUserMenu()">
+        👤 <span id="userName"></span>
+    </div>
+    
+    <div id="userMenu" class="user-menu">
+        <a href="#" onclick="logout()">Выйти</a>
+    </div>
+    <a href="index.html">Басты бет</a>
+    <a href="cart.html">Жәшік</a>
+    <a href="profile.html">Тапсырыстар</a>
+</div>
+
+<!-- Затемнение -->
+<div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+<h1>Жәшік</h1>
+
+<div id="cart-items"></div>
+
+<h2 id="total"></h2>
+
+<button onclick="clearCart()">Жәшікті тазарту</button>
+<button onclick="goToCheckout()">Тапсырыс беру</button>
+<script src="cart.js"></script>
+<script src="ui.js"></script>
+<script src="auth-check.js"></script>
+</body>
+</html>

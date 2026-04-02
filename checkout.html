@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Оформление заказа</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- МЕНЮ -->
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<div id="sidebar" class="sidebar">
+    <div class="user-info" onclick="toggleUserMenu()">
+        👤 <span id="userName"></span>
+    </div>
+    
+    <div id="userMenu" class="user-menu">
+        <a href="#" onclick="logout()">Выйти</a>
+    </div>
+    <a href="index.html">Басты бет</a>
+    <a href="cart.html">Жәшік</a>
+    <a href="profile.html">Тапсырыстар</a>
+</div>
+
+<div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+<h1>Тапсырыс беру</h1>
+
+<form id="orderForm">
+    <input type="text" placeholder="Сіздің атыңыз" required><br><br>
+    <input type="tel" placeholder="Телефон" required><br><br>
+    <input type="text" placeholder="Жеткізу мекен-жайы" required><br><br>
+    <input type="date" required><br><br>
+    <input type="time" required><br><br>
+
+    <button type="submit">Тапсырыс беру</button>
+</form>
+
+<script src="products.js"></script>
+<script src="checkout.js"></script>
+
+</body>
+</html>
